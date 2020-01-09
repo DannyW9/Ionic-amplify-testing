@@ -1,0 +1,12 @@
+type Deck @model @auth(rules: [{ allow: owner }]) {  
+  id: ID!
+  name: String!
+  cards: [Card]! @connection(name: "DeckCards")
+}
+
+type Card @model @searchable @auth(rules: [{ allow: owner}]) {  
+  id: ID!
+  question: String!
+  answer: String
+  deck: Deck! @connection(name: "DeckCards")
+}

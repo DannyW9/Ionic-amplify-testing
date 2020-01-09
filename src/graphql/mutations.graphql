@@ -1,0 +1,115 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateDeck(
+  $input: CreateDeckInput!
+  $condition: ModelDeckConditionInput
+) {
+  createDeck(input: $input, condition: $condition) {
+    id
+    name
+    cards {
+      items {
+        id
+        question
+        answer
+        owner
+      }
+      nextToken
+    }
+    owner
+  }
+}
+mutation UpdateDeck(
+  $input: UpdateDeckInput!
+  $condition: ModelDeckConditionInput
+) {
+  updateDeck(input: $input, condition: $condition) {
+    id
+    name
+    cards {
+      items {
+        id
+        question
+        answer
+        owner
+      }
+      nextToken
+    }
+    owner
+  }
+}
+mutation DeleteDeck(
+  $input: DeleteDeckInput!
+  $condition: ModelDeckConditionInput
+) {
+  deleteDeck(input: $input, condition: $condition) {
+    id
+    name
+    cards {
+      items {
+        id
+        question
+        answer
+        owner
+      }
+      nextToken
+    }
+    owner
+  }
+}
+mutation CreateCard(
+  $input: CreateCardInput!
+  $condition: ModelCardConditionInput
+) {
+  createCard(input: $input, condition: $condition) {
+    id
+    question
+    answer
+    deck {
+      id
+      name
+      cards {
+        nextToken
+      }
+      owner
+    }
+    owner
+  }
+}
+mutation UpdateCard(
+  $input: UpdateCardInput!
+  $condition: ModelCardConditionInput
+) {
+  updateCard(input: $input, condition: $condition) {
+    id
+    question
+    answer
+    deck {
+      id
+      name
+      cards {
+        nextToken
+      }
+      owner
+    }
+    owner
+  }
+}
+mutation DeleteCard(
+  $input: DeleteCardInput!
+  $condition: ModelCardConditionInput
+) {
+  deleteCard(input: $input, condition: $condition) {
+    id
+    question
+    answer
+    deck {
+      id
+      name
+      cards {
+        nextToken
+      }
+      owner
+    }
+    owner
+  }
+}

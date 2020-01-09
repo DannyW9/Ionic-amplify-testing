@@ -1,0 +1,97 @@
+# this is an auto generated file. This will be overwritten
+query GetDeck($id: ID!) {
+  getDeck(id: $id) {
+    id
+    name
+    cards {
+      items {
+        id
+        question
+        answer
+        owner
+      }
+      nextToken
+    }
+    owner
+  }
+}
+query ListDecks(
+  $filter: ModelDeckFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listDecks(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      cards {
+        nextToken
+      }
+      owner
+    }
+    nextToken
+  }
+}
+query GetCard($id: ID!) {
+  getCard(id: $id) {
+    id
+    question
+    answer
+    deck {
+      id
+      name
+      cards {
+        nextToken
+      }
+      owner
+    }
+    owner
+  }
+}
+query ListCards(
+  $filter: ModelCardFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listCards(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      question
+      answer
+      deck {
+        id
+        name
+        owner
+      }
+      owner
+    }
+    nextToken
+  }
+}
+query SearchCards(
+  $filter: SearchableCardFilterInput
+  $sort: SearchableCardSortInput
+  $limit: Int
+  $nextToken: String
+) {
+  searchCards(
+    filter: $filter
+    sort: $sort
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      question
+      answer
+      deck {
+        id
+        name
+        owner
+      }
+      owner
+    }
+    nextToken
+    total
+  }
+}

@@ -1,0 +1,97 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateDeck($owner: String!) {
+  onCreateDeck(owner: $owner) {
+    id
+    name
+    cards {
+      items {
+        id
+        question
+        answer
+        owner
+      }
+      nextToken
+    }
+    owner
+  }
+}
+subscription OnUpdateDeck($owner: String!) {
+  onUpdateDeck(owner: $owner) {
+    id
+    name
+    cards {
+      items {
+        id
+        question
+        answer
+        owner
+      }
+      nextToken
+    }
+    owner
+  }
+}
+subscription OnDeleteDeck($owner: String!) {
+  onDeleteDeck(owner: $owner) {
+    id
+    name
+    cards {
+      items {
+        id
+        question
+        answer
+        owner
+      }
+      nextToken
+    }
+    owner
+  }
+}
+subscription OnCreateCard($owner: String!) {
+  onCreateCard(owner: $owner) {
+    id
+    question
+    answer
+    deck {
+      id
+      name
+      cards {
+        nextToken
+      }
+      owner
+    }
+    owner
+  }
+}
+subscription OnUpdateCard($owner: String!) {
+  onUpdateCard(owner: $owner) {
+    id
+    question
+    answer
+    deck {
+      id
+      name
+      cards {
+        nextToken
+      }
+      owner
+    }
+    owner
+  }
+}
+subscription OnDeleteCard($owner: String!) {
+  onDeleteCard(owner: $owner) {
+    id
+    question
+    answer
+    deck {
+      id
+      name
+      cards {
+        nextToken
+      }
+      owner
+    }
+    owner
+  }
+}
